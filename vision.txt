@@ -1,0 +1,25 @@
+PROJECT VISION
+
+This project is a minimal real-time crypto intelligence dashboard built using Python and Streamlit.
+
+The objective is to create a professional fintech-style market terminal that combines:
+
+- Real-time crypto price tracking
+- Interactive dynamic charts
+- Live TradingView trading charts
+- Multi-currency support (USD, EUR, etc.)
+- AI-generated market insights
+- News-based sentiment analysis
+
+The application is intentionally designed to be clean, fast, and structured — focusing on product thinking rather than feature overload.
+
+This project demonstrates:
+
+- Multi-API integration (CoinMarketCap, CoinGecko, News API)
+- AI integration via OpenRouter (arcee-ai/trinity-large-preview)
+- Real-time UI updates
+- Caching and performance optimization
+- Clean dashboard layout architecture
+
+The goal is not to build a crypto super app,
+but a minimal crypto intelligence terminal suitable for fintech environments.
