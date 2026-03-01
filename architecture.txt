@@ -1,0 +1,60 @@
+SYSTEM ARCHITECTURE
+
+1. FRONTEND
+Built using Streamlit (wide layout mode).
+
+Layout Structure:
+- Left Sidebar: Coin selection, currency selection, refresh settings
+- Main Area: Price metrics, dynamic Plotly chart, TradingView embed
+- Right Sidebar: News headlines + AI-generated insights
+
+2. DATA SOURCES
+
+CoinMarketCap API:
+- Real-time price
+- 24h change
+- Volume
+- Multi-currency support
+
+CoinGecko API:
+- Historical chart data
+- Optional fallback data source
+
+News API / Crypto News:
+- Recent headlines related to selected coin
+
+OpenRouter API:
+- Model: arcee-ai/trinity-large-preview
+- Used for sentiment analysis and market insight generation
+
+3. DATA FLOW
+
+User selects coin
+        ↓
+Fetch price data (CoinMarketCap)
+Fetch chart data (CoinGecko)
+Fetch news headlines
+        ↓
+Cache selected data
+        ↓
+Send structured prompt to OpenRouter
+        ↓
+Return short AI insight
+        ↓
+Render UI
+
+4. PERFORMANCE STRATEGY
+
+- st.cache_data(ttl=...) for news and AI responses
+- Minimal conditional logic
+- Lightweight refresh cycles
+- Efficient API calls
+- Dark theme for faster visual clarity
+
+5. DESIGN PRINCIPLES
+
+- Minimal but professional
+- Fast-loading interface
+- Clear separation of concerns
+- No unnecessary feature clutter
+- Fintech terminal aesthetic
